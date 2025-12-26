@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { LocalizeText } from '../../api';
 import { Base, Column, LayoutProgressBarLoad, Text } from '../../common';
 
 interface LoadingViewProps
@@ -24,7 +25,7 @@ export const LoadingView: FC<LoadingViewProps> = props =>
                                 <Base style={ { marginLeft: '2.5%' } } className="text-loading-havvo">{ message }... 75%</Base></>
                             :
                             <>
-                                <Text fontSize={ 1 } variant="white" className="text-shadow text-loading-havvo">Aguarde, o OnPixels está carregando... { percent.toFixed() }%</Text>
+                                <Text fontSize={ 1 } variant="white" className="text-shadow text-loading-havvo">{LocalizeText('camera.loading')}... { percent.toFixed() }%</Text>
                                 <LayoutProgressBarLoad isLoading={ true } progress={ percent } className="mt-2 large" />
                             </>
                         }

@@ -52,7 +52,7 @@
     height: 50px;
 
     &::placeholder {
-        font-family: Goldfish;
+        font-family: Volter;
     }
 }
 
@@ -67,7 +67,8 @@
 
     .table {
         color: $black;
-        font-family: Goldfish-Bold;
+        font-family: Volter;
+        font-weight: bold;
 
         > :not(caption)>*>* {
             box-shadow: none;
@@ -80,7 +81,7 @@
         }
 
         td {
-            font-family: Goldfish;
+            font-family: Volter;
         }
     }
 }
