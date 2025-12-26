@@ -1,0 +1,72 @@
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// https://primer.github.io/.
+
+.form-select {
+  height: 24px;
+  width: 110px;
+  border-image-slice:4 4 4 4 fill;
+  border-image-width:4px 4px 4px 4px;
+  border-image-repeat:repeat repeat;
+  border-image-source: url("@/assets/flash/boxes/card/dropdown.png");
+  background-color: transparent;
+  appearance: none;
+
+
+  &:focus {
+    border-color: $form-select-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $form-select-focus-box-shadow;
+    }
+  }
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    padding-right: $form-select-padding-x;
+    background-image: none;
+  }
+
+  &:disabled {
+    color: $form-select-disabled-color;
+    background-color: $form-select-disabled-bg;
+    border-color: $form-select-disabled-border-color;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $form-select-color;
+  }
+}
+
+.form-dropdown-button {
+  background-image: url("@/assets/flash/boxes/card/dropdown_button.png");
+  background-repeat: no-repeat;
+  float: left;
+  position: absolute;
+  left: 97px;
+  top: 73px;
+  border-radius: 4px;
+  width: 20px;
+  height: 29px;
+}
+
+.form-select-sm {
+  padding-top: $form-select-padding-y-sm;
+  padding-bottom: $form-select-padding-y-sm;
+  padding-left: $form-select-padding-x-sm;
+  font-size: 9px;
+  font-family: Goldfish;
+}
+
+.form-select-lg {
+  padding-top: $form-select-padding-y-lg;
+  padding-bottom: $form-select-padding-y-lg;
+  padding-left: $form-select-padding-x-lg;
+  @include font-size($form-select-font-size-lg);
+}

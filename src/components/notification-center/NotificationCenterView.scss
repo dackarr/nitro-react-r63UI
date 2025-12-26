@@ -1,0 +1,102 @@
+.nitro-notification-center-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: calc(100% - #{$toolbar-height});
+    z-index: $notification-center-zindex;
+    pointer-events: none;
+
+    .nitro-notification-center {
+        background-color: $dark;
+        height: 100%;
+        pointer-events: all;
+    }
+}
+
+.notification-bubble-text {
+    font-family: Goldfish;
+    font-size: 9px;
+}
+
+.nitro-alert {
+    min-height: 150px;
+    max-height: 350px;
+
+    .flashui-logo {
+        background: url('@/assets/flash/flashui_logo.png');
+        width: 118px;
+        height: 38px;
+        background-position: center;
+    }
+
+    .notification-frank {
+        background-image: url('@/assets/images/notifications/frank.gif');
+        width:47px;
+        height: 85px;
+    }
+
+    .notification-text {
+        min-width: 250px;
+    }
+
+    &.nitro-alert-default,
+    &.nitro-alert-motd {
+        width: 350px;
+        .notification-text {
+            min-width: auto;
+        }
+    }
+
+    &.nitro-alert-moderation,
+    &.nitro-alert-alert {
+        width: 250px;
+        .notification-text {
+            min-width: 225px;
+        }
+    }
+}
+
+.nitro-notification-bubble {
+    pointer-events: all;
+    padding: 6px 5px;
+    border-image-source: url('@/assets/flash/notifications/notifications_bg.png');
+    border-image-slice: 9 9 9 9 fill;
+    border-image-width: 9px 9px 10px 9px;
+    font-size: $font-size-sm;
+    padding-right: 3px;
+    padding-left: 0px;
+    padding-top: 0px;
+
+    .bubble-image-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .grouproom-header {
+        background: #6a7069;
+        border-radius: 10px 10px 0px 0px;
+        position: relative;
+
+        .arrow-down {
+            background: url('@/assets/flash/notifications/notification_arrow_down.png');
+            width: 18px;
+            height: 19px;
+            position: absolute;
+            right: 5px;
+        }
+
+        .arrow-left {
+            background: url('@/assets/flash/notifications/notification_arrow_left.png');
+            width: 18px;
+            height: 19px;
+            position: absolute;
+            right: 5px;
+        }
+
+        .header-text {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}

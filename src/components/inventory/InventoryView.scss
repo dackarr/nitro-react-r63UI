@@ -1,0 +1,110 @@
+.nitro-inventory {
+    height: $inventory-height;
+    min-height: $inventory-height;
+    max-height: $inventory-height + 150px;
+    width: $inventory-width;
+    min-width: $inventory-width;
+    max-width: $inventory-width + 150px;
+    color: #000;
+
+    input {
+        min-height: 20px;
+        max-height: 20px;
+    }
+
+    &.trading {
+        width: 535px;
+        min-height: $inventory-height + 290px !important;
+
+        .trading-inventory {
+            max-height: 200px;
+        }
+    }
+
+    .empty-image {
+        background: url('@/assets/images/inventory/empty.png');
+        width: 129px;
+        height: 181px;
+    }
+
+    .trade-button {
+        min-height: 0;
+        font-size: 8px;
+        padding: 1px 2px;
+        z-index: 5;
+    }
+
+    .trade-bg {
+        border-image-source: url('@/assets/flash/inventory/trading_bg.png');
+        border-image-slice: 15 15 15 15 fill;
+        border-image-width: 15px 15px 15px 15px;
+    }
+
+    .credits-align {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 230px;
+    }
+
+    .quantity-input {
+        width: 49px;
+    }
+
+    .lock-design-left {
+        margin-left: 21px;
+        margin-right: 33px;
+    }
+
+    .ach-badge-container {
+        background-color: #cacaca;
+        border-radius: 6px !important;
+        border: solid 1px #000 !important;
+        justify-content: center;
+        align-content: center;
+        width: 46px;
+        height: 46px;
+        padding: 2px;
+        background-position: center;
+    }
+
+    .inventory-ach-view {
+        height: 100%;
+    }
+
+    .inventory-ach-main-view {
+        height: 100%;
+    }
+
+    .badge-image {
+        width: 42px;
+        bottom: 3px;
+        height: 40px;
+        margin-bottom: -4px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .lock-design-right {
+        margin-left: 21px;
+    }
+
+    .divisor {
+        height: 180px;
+        border-left: 2px solid #B4B4B4;
+        margin-top: 15px;
+    }
+
+    .inventory-ach-item:nth-child(odd) {
+        background-color: #e9e9e1;
+    }
+
+    .badges-overflow-x {
+        overflow-x: hidden !important;
+    }
+
+    .inventory-ach-item:nth-child(even) {
+        background-color: #fff;
+    }
+}

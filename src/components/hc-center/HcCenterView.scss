@@ -1,0 +1,56 @@
+.nitro-hc-center {
+    width: 459px;
+    resize: none;
+
+    .hc-logo {
+        width: 459px;
+        height: 137px;
+        background-image: url('@/assets/flash/habboclub/hc_header.png');
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
+    }
+
+    .payday-special {
+        border-image-source: url('@/assets/flash/habboclub/hc_blue_bg.png');
+        border-image-slice: 4 4 4 4 fill;
+        border-image-width: 4px 4px 4px 4px;
+        height: 128px;
+        margin-right: -2px;
+    }
+
+    .hc-gift-special {
+        border-image-source: url('@/assets/flash/habboclub/hc_green_bg.png');
+        border-image-slice: 4 4 4 4 fill;
+        border-image-width: 4px 4px 4px 4px;
+    }
+
+    .payday {
+        width: 222px;
+        height: 150px;
+        background-image: url('@/assets/images/hc-center/payday.png');
+        z-index: 3;
+        color: #6b3502;
+    }
+
+    .clock {
+        width: 24px;
+        height: 24px;
+        background-image: url('@/assets/images/hc-center/clock.png');
+    }
+
+    .streak-info {
+        min-height: 64px;
+        line-height: 16px;
+    }
+
+    .habbo-avatar {
+        z-index: 4;
+    }
+
+    .benefits {
+        background-image: url('@/assets/images/hc-center/benefits.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+}

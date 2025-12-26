@@ -1,0 +1,14 @@
+.nitro-right-side {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    min-width: 200px;
+    max-width: 200px;
+    height: calc(100% - #{$toolbar-height});
+    z-index: $rightside-zindex;
+    pointer-events: none;
+
+    &.landing-view {
+        max-width: 200px !important;
+    }
+}

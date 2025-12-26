@@ -1,0 +1,213 @@
+.Sidebar {
+  position: absolute !important;
+  top: 5px;
+  left: 5px;
+  height: auto;
+  display: inline-flex;
+  flex-direction: column;
+  width: 84px;
+  background: rgb(92, 87, 81);
+  box-shadow: inset 0px 5px 0px -3px #817f7a, inset 0px -4px 0px -2px #817f7a, inset -4px 0px 0px -2px #817f7a, inset 4px 0px 0px -2px #817f7a, 2px 2px 0px 0px rgba(0, 0, 0, 0.54);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0.3em;
+
+  &.rooms {
+    top: 82px;
+  }
+}
+
+.house-btn {
+  position: absolute;
+  border-image-source: url("@/assets/flash/buttons/illumina.png");
+  border-image-slice: 6 6 6 6 fill;
+  border-image-width: 6px 6px 6px 6px;
+  padding: 1.2em !important;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 45px;
+
+  &.house {
+    top: 15px;
+    left: 15px;
+  }
+
+  &.rooms {
+    top: 15px;
+    left: 100px;
+  }
+
+  .panic-icon {
+    background: url("@/assets/images/toolbar/icons/panic-icon.png");
+    width: 23px;
+    height: 22px;
+    margin-left: -5px;
+    margin-right: 5px;
+  }
+
+  .house-icon {
+    background: url("@/assets/images/toolbar/icons/house.png");
+    width: 32px;
+    height: 30px;
+    margin-left: -5px;
+  }
+
+
+}
+
+.Sidebar-group {
+  position: relative;
+
+  &:hover {
+      -webkit-transform: translate(-1px, -1px);
+      transform: translate(-1px, -1px);
+      filter: drop-shadow(2px 2px 0 rgba($black, 0.4));
+  }
+}
+
+.Sidebar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 87px;
+  padding: 0 15px;
+  border: 0;
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-weight: 400;
+  background-color: transparent;
+  color: #88919e;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+
+  &.rooms {
+    padding: 18px 15px 8px 15px;
+  }
+
+  &:hover {
+    -webkit-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
+  }
+}
+
+.Sidebar-button:active,.Sidebar-button:focus {
+  outline: 0
+}
+
+.Sidebar-button:hover {
+  background-color: transparent;
+}
+
+
+.Sidebar-buttonText {
+  margin-top: 4px;
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  color: #fff;
+}
+
+.Sidebar-subMenu {
+  position: absolute;
+  right: -20px;
+  bottom: 15px;
+  border-radius: 8px;
+  background-color: #2c2f33;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease-in-out
+}
+
+.Sidebar-subMenu:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: transparent;
+}
+
+.Sidebar-subMenu .Sidebar-subMenu {
+  top: 50%;
+  bottom: unset;
+  transform: translate(100%,-50%)
+}
+
+.Sidebar-subMenu>.Sidebar-group:first-of-type .Sidebar-button {
+  border-radius: 8px 8px 0 0
+}
+
+.Sidebar-subMenu>.Sidebar-group:last-of-type .Sidebar-button {
+  border-radius: 0 0 8px 8px
+}
+
+.Sidebar-subMenu .Sidebar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  max-width: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  background-color: transparent;
+  transition: background-color .25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.Sidebar-item-avatar {
+  width: 50px;
+  height: 45px;
+  background-position-y: 40%;
+}
+
+.Sidebar-subMenu .Sidebar-button:active,.Sidebar-subMenu .Sidebar-button:focus {
+  outline: 0
+}
+
+.Sidebar-subMenu .Sidebar-button .Sidebar-buttonImage {
+  max-width: 45px
+}
+
+.Sidebar-subMenu .Sidebar-button .Sidebar-buttonText {
+  margin-top: 5px;
+  font-size: .625rem;
+  line-height: .75rem;
+  color: #88919e;
+}
+
+.Sidebar-group:hover>.Sidebar-subMenu,.Sidebar-subMenu:hover {
+  opacity: 1;
+  pointer-events: all
+}
+
+.Sidebar-group--has-Submenu {
+  position: relative
+}
+
+.Sidebar-group--has-Submenu>.Sidebar-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-width: 7px 14px 7px 0;
+  border-style: solid;
+  border-color: transparent #2c2f33 transparent transparent;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(100%,-50%);
+  transition: opacity .25s ease-in-out
+}
+
+.Sidebar-group--has-Submenu:hover>.Sidebar-button:after,.Sidebar-group--has-Submenu>.Sidebar-button:hover:after {
+  opacity: 1
+}

@@ -1,0 +1,39 @@
+@import './fonts';
+@import './bootstrap/bootstrap';
+@import './scrollbars';
+@import './slider';
+@import './icons';
+@import './utils';
+
+.btn-sm {
+  min-height: 28px;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.font-bold {
+  font-family: Ubuntu;
+  font-weight: bold;
+}
+
+.goldfish-bold {
+  font-family: Goldfish-Bold;
+}
+
+.font-italic {
+  font-family: UbuntuItalics;
+}

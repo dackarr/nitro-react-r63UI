@@ -1,0 +1,35 @@
+.ton-button {
+    cursor: pointer;
+    text-align: center;
+    border-image-repeat: repeat repeat;
+    color: black;
+
+    will-change: border-image-source;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    &[data-style="0"],
+    &[data-style="1"] {
+        color: black;
+        font-size: 9px;
+        -webkit-font-smoothing: none;
+    } font-family: Volter, sans-serif;
+    }
+
+.gift-color-btn {
+    outline: 1px solid #000;
+    border: 3px solid #d2d2d2;
+    min-height: 22px;
+    min-width: 23px;
+
+    &:hover {
+        border-color: #fff;
+    }
+
+    &.active {
+        border-color: #fff;
+    }
+}

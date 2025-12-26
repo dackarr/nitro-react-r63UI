@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('@/assets/webfonts/UbuntuRegular-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url('@/assets/webfonts/UbuntuBold-latin.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Volter;
+    src: url('@/assets/webfonts/Volter2.woff') format('woff');
+}
+
+@font-face {
+    font-family: Volter;
+    src: url('@/assets/webfonts/VolterBold2.woff') format('woff');
+    font-weight: bold;
+}

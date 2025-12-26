@@ -1,0 +1,171 @@
+.nitro-chat-input-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 18vw;
+    bottom:65px;
+    height: 38px;
+    border-image-source: url('@/assets/flash/room/chatinput.png');
+    border-image-slice:8 8 8 8 fill;
+    border-image-width:8px 8px 8px 8px;
+    background: #e4e4e4;
+    border-radius: 9px;
+    padding-right: 10px;
+    z-index: 31;
+
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        position: absolute;
+        bottom: 70px;
+        left: 30px;
+        width: 85vw;
+    }
+
+    .input-sizer {
+        align-content: center;
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .chat-input {
+            width: 100%;
+        }
+
+        &::after,
+        input,
+        textarea {
+            min-width: 1em;
+            grid-area: 1 / 2;
+            margin: 0;
+            resize: none;
+            background: none;
+            appearance: none;
+            border: none;
+            outline: none;
+        }
+        /* IDK why comment this fixes the chat bar LMAO
+        &::after {
+            content: attr(data-value) '  ';
+            visibility: hidden;
+            white-space: pre-wrap;
+        }*/
+    }
+
+    .bubble-container {
+        visibility: visible;
+        width: 75%;
+    }
+}
+
+.nitro-chat-style-selector-container {
+    width: $chat-input-style-selector-widget-width;
+    max-height: $chat-input-style-selector-widget-height;
+    background: transparent;
+    border: 0px;
+    box-shadow: none;
+
+    :before {
+        border-top-color: transparent !important;
+    }
+
+    :after {
+        border-top-color: transparent !important;
+    }
+
+    .content-area {
+        max-height: $chat-input-style-selector-widget-height !important;
+        position: relative;
+        bottom: 18px;
+    }
+
+    .bubble-parent-container {
+        height: 30px;
+
+        .bubble-container {
+            position: relative;
+            width: 50px;
+        }
+    }
+
+    .popover-arrow {
+        background-image: url('@/assets/flash/room/info_pointer.png') !important;
+        width: 18px !important;
+        height: 12px !important;
+        position: relative;
+        bottom: -7px;
+    }
+}
+
+.chatstyles-selector {
+    position: absolute;
+    border-image-source: url('@/assets/flash/room/chatinput.png');
+    border-image-slice: 8 8 8 8 fill;
+    border-image-width: 8px 8px 8px 8px;
+    min-width: 80px;
+    height: 38px;
+    margin-left: -86px;
+    background: #e4e4e4;
+    border-radius: 9px;
+
+    .arrow-selector {
+        background: url("@/assets/flash/room/display-sel.png");
+        width: 10px;
+        height: 5px;
+        position: absolute;
+        left: 80%;
+        top: 45%;
+
+        &.displayed {
+            background: url("@/assets/flash/room/displayed-sel.png");}
+    }
+}
+
+.bubble-window {
+    border-image-source: url('@/assets/flash/room/chatstyles_selector_window.png');
+    border-image-slice:9 9 9 9 fill;
+    border-image-width:9px 9px 9px 9px;
+    margin-bottom: -13px;
+}
+
+.info-habbopages {
+    cursor: pointer;
+    background-image: url("@/assets/flash/boxes/card/questionmark.png");
+    width: 19px;
+    height: 20px;
+    left: -104px;
+    position: absolute;
+
+        &:hover {
+            background-image: url("@/assets/flash/boxes/card/questionmark_hover.png");
+
+        &:active {
+            background-image: url("@/assets/flash/boxes/card/questionmark_click.png");
+        }
+    }
+}
+
+.say-btn {
+    border-image-source: url(/src/assets/flash/buttons/say-btn.png);
+    border-image-slice: 9 9 9 9 fill;
+    border-image-width: 9px 9px 9px 9px;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 15px;
+    height: 38px;
+    left: 102%;
+    padding-right: 15px;
+
+    &:hover {
+        border-image-source: url(/src/assets/flash/buttons/say-btn.png);
+        border-image-slice: 9 9 9 9 fill;
+        border-image-width: 9px 9px 9px 9px;
+        filter: brightness(1.1);
+    }
+
+    &:active {
+        border-image-source: url(/src/assets/flash/buttons/say-btn.png);
+        border-image-slice: 9 9 9 9 fill;
+        border-image-width: 9px 9px 9px 9px;
+        filter: brightness(0.8);
+    }
+}

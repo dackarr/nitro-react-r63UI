@@ -1,0 +1,30 @@
+.nitro-loading {
+  position: relative;
+  background: #040404;
+  z-index: 100;
+
+  .connecting-duck {
+    position: absolute !important;
+    background: url(/src/assets/images/loading/habbo.gif) no-repeat top left;
+    width: 274px;
+    height: 68px;
+    top: 340px;
+    filter: drop-shadow(0px 0px 1px #ffffff);
+  }
+
+  .text-loading-havvo {
+    font-family: Goldfish;
+    position: fixed !important;
+    font-size: 9px !important;
+    top: 460px !important;
+    text-align: left !important;
+
+  }
+
+  .nitro-logo {
+    width: 47px;
+    height: 65px;
+    background: transparent url('https://assets.nitrodev.co/logos/react-loader.png') no-repeat center;
+    z-index: 1;
+  }
+}

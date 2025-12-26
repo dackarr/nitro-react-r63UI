@@ -1,0 +1,368 @@
+.nitro-catalog {
+    width: $catalog-width;
+    height: $catalog-height;
+    min-width: 528px;
+
+    font[size='16'] {
+        font-size: 20px;
+    }
+
+    .catalog-search-button {
+        right: 5px;
+        top: 3px;
+        cursor: pointer;
+    }
+
+    .avatar-image {
+        background-position: -27px -37px!important;
+    }
+
+    .catalog-default-image {
+        max-height: 250px;
+        height: 250px;
+    }
+
+    .grid-price-view {
+        font-size: 10px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+    }
+
+
+    .catalog-clear-button {
+        right: 5px;
+        top: 6px;
+        cursor: pointer;
+    }
+
+    .quantity-input {
+        min-height: 17px;
+        width: 28px;
+        padding: 0 4px;
+        text-align: right;
+    }
+
+    .grid-bg {
+        border-image-source: url('@/assets/flash/catalogue/cata_bg.png');
+        border-image-slice: 6 6 6 6 fill;
+        border-image-width: 6px 6px 6px 6px;
+    }
+
+    .credits-bg {
+        border-image-source: url('@/assets/flash/catalogue/credits_bg.png');
+        border-image-slice: 6 6 6 6 fill;
+        border-image-width: 6px 6px 6px 6px;
+    }
+
+    .credits-default-layout {
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
+    }
+
+    .item-title {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+    }
+
+    .selectproduct-title {
+		position: absolute;
+		font-size: 11px;
+		color: #62615f;
+	}
+
+    .item-picker {
+        max-height: 195px;
+        min-height: 150px;
+    }
+
+    .group-furni-picker {
+        max-height: 110px;
+        min-height: 110px;
+    }
+
+    .quanity-container {
+        height: 20px;
+    }
+
+    .catalog-image-column {
+        padding-top: 67px;
+        padding-bottom: 67px;
+    }
+
+    .purchase-buttons {
+        width: 100%;
+
+        .btn {
+            width: 100%;
+            height: 20px;
+        }
+    }
+}
+
+.group-forum-page {
+
+    font-size: 13px;
+
+    font[size='16'] {
+        font-size: 15px;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+.trophy-text {
+    height: 150px;
+}
+
+.nitro-catalog-gift {
+    width: 325px;
+
+    .gift-preview {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gift-color {
+        width: 15px;
+        height: 15px;
+        border-radius: $border-radius;
+    }
+}
+
+.catalog-left {
+    width: 184px;
+}
+
+.catalog-header {
+    height: 120px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    background-color: #0e4258;
+    margin-top: -1px;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 3px #ffffff40;
+    position: relative;
+
+    .catalog-header-content {
+        position: absolute;
+        margin-top: 20px;
+
+        .catalog-icon {
+            transform: scale(2);
+            filter: drop-shadow(2px 1px 0 rgba(0,0,0,.239216));
+            position: absolute;
+            top: 15px;
+            left: 35px;
+        }
+    }
+
+    .catalog-header-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width:100%;
+        height: 100%;
+        opacity: .1;
+        filter: grayscale(1);
+        }
+
+    .catalog-header-icon {
+        width: 85px;
+        float: left;
+    }
+
+    .catalog-header-title {
+        font-size: 15px;
+        height: 3px;
+        padding-left: 80px;
+        margin-top: -5px;
+    }
+
+    .catalog-header-desc {
+        font-size: 12px;
+        padding-left: 80px;
+        padding-right: 10px;
+    }
+}
+
+.nitro-catalog-navigation-grid-container {
+
+    .nitro-catalog-navigation-section {
+        display: grid;
+
+        .nitro-catalog-navigation-section {
+            padding-left: 5px;
+            border-left: 2px solid #b6bec5;
+        }
+    }
+
+    .layout-grid-item {
+        font-size: $font-size-sm;
+        height: 23px !important;
+        border-color: unset !important;
+        border: 0 !important;
+        padding: 1px 3px;
+
+        .svg-inline--fa {
+            color: $black;
+            font-size: 10px;
+            padding: 1px;
+        }
+
+        &.layout-grid-item {
+            background-color: transparent;
+        }
+
+        &.layout-grid-item.active:not(.clear-bg) {
+            background-color: #63c5e9 !important;
+            border-top: 2px solid #82d1ed !important;
+            border-bottom: 2px solid #82d1ed !important;
+            font-family: Ubuntu;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: #63c5e9 !important;
+            border-top: 2px solid #82d1ed !important;
+            border-bottom: 2px solid #82d1ed !important;
+            font-family: Ubuntu;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}
+
+.nitro-catalog-layout-info-loyalty {
+    .info-loyalty-content {
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-image: url('@/assets/images/catalog/diamond_info_illustration.gif');
+        padding-right: 123px;
+    }
+
+    .info-image {
+        width: 123px;
+        height: 350px;
+        background-image: url('@/assets/images/catalog/diamond_info_illustration.gif');
+    }
+}
+
+.nitro-catalog-layout-vip-buy-grid {
+    .layout-grid-item {
+        height: 50px !important;
+        max-height: 50px !important;
+
+        .icon-hc-banner {
+            width: 68px;
+            height: 40px;
+            background: url('@/assets/images/catalog/hc_big.png') center
+                no-repeat;
+        }
+    }
+}
+
+.nitro-catalog-layout-marketplace-grid {
+    .layout-grid-item {
+        height: 75px !important;
+    }
+}
+
+.nitro-catalog-layout-vip-gifts-grid {
+    .layout-grid-item {
+        height: 55px !important;
+        max-height: 55px !important;
+    }
+}
+
+.nitro-catalog-layout-marketplace-post-offer {
+    width: $marketplace-post-offer-width;
+    height: $marketplace-post-offer-height;
+}
+
+.nitro-catalog-layout-bundle-grid {
+    .layout-grid-item {
+        background-color: transparent;
+    }
+}
+
+.nitro-front-page-item-text {
+    border-image-source: url('@/assets/flash/catalogue/cata_feature_text_bg.png');
+    border-image-slice: 6 6 6 6 fill;
+    border-image-width: 6px 6px 6px 6px;
+    width: 96%;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.voucher-box {
+    border-image-source: url('@/assets/flash/catalogue/voucer_bg.png');
+    border-image-slice: 6 6 6 6 fill;
+    border-image-width: 6px 6px 6px 6px;
+    font-size: 13px;
+}
+
+.voucher-form {
+    height: 24px;
+}
+
+.autocomplete-gift-container {
+    background: #fff;
+    padding: 8px;
+    list-style-type: none;
+    min-width: 307px;
+    border-radius: 0.2rem;
+    position: absolute;
+    font-size: 0.7875rem;
+    top: 81px;
+    left: 8px;
+    border: 1px solid #b6c1ce;
+    margin: 0;
+    border-radius: 2px;
+    margin: 0;
+    box-sizing: border-box;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 1;
+
+    .autocomplete-gift-item {
+        width: 100%;
+        box-sizing: border-box;
+        &:hover {
+            background-color: #ebf4ff;
+        }
+    }
+}
+
+.club-content {
+    height: 73px;
+    background-color: #DEDEDE;
+    border-radius: 12px;
+    border: 1px solid #959595;
+
+    .content-title {
+        height: 25px;
+        background-color: #959595;
+        border-radius: 6px;
+    
+        .margin-image {
+            margin-right: 27px;
+        }
+
+        .margin-text {
+            margin-top: -2px;
+        }
+    }
+}
+
+@import './views/targeted-offer/Offer.scss';
